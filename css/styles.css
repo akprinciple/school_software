@@ -1,0 +1,814 @@
+    
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ *{
+      font-family: calibri;
+      scroll-behavior: smooth;
+      /*transition: 2s;*/
+        }
+
+.table-head{
+  background-color: rgba(0, 128, 0, 0.2);
+}
+.shadow-me{
+      box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.1);
+    }
+  
+.rand{
+  border-radius: 3px 3px 0px 0px;
+}
+.img{width: 50%; transition: 2s;}
+      .img:hover{
+          width: 75%;
+          border-radius: 20%;
+      }
+      .bord{
+          border: 1px dotted red;
+          margin-top: 10px;
+          
+      }
+      .imag{
+        width: 49%; 
+        height: 400px;
+        transition: 4s;
+      }
+      .ima{
+        width: 33%;
+        
+      }
+      .b-right{
+        border-right: 1px solid rgb(0, 0, 255);
+      }
+      .imag:hover{
+            height: 500px;
+      }
+      .overlay{
+  background: linear-gradient(rgba(3, 0, 0, 0.7)50%, rgba(0, 0, 0, 0.9)100%);
+}
+.gradient{
+  background: linear-gradient(rgb(0, 143, 0)0%, rgb(2, 255, 234)100%);
+
+  }
+  .search{
+        width: 70%;
+        margin: auto;
+        transition: 3s;
+  }
+  .search:focus{
+    width: 100%;
+    outline: none;
+
+  }
+  .m-top{
+        margin-top: 28%;
+
+  }
+  .outline{
+    outline: none;
+  }
+  a:hover{
+    text-decoration: none;
+  }
+  .ajx{
+    height: 100%;
+    overflow-y: auto;
+    z-index: 1;
+  }
+
+  .pict{
+    width: 50%;
+    border-radius: 20%; 
+  }
+  .pict:hover{
+          border-radius: 0;
+          transition: 2s;
+  }
+  .success a{
+    color: white;
+  }
+.success a:hover{
+      background-color: white;
+      color: green;
+}
+ body{
+      background-color: ghostwhite;
+    }
+
+.animate{
+      animation: animate 2s linear infinite;
+      border: 3px solid;
+       border-color: magenta yellow rgb(2, 255, 234) cyan;
+    }
+    @keyframes animate{
+      0%{ border-color: cyan magenta yellow rgb(2, 255, 234)}
+      33%{ border-color: magenta yellow rgb(2, 255, 234) cyan}
+      66%{ border-color: yellow rgb(2, 255, 234) cyan magenta}
+      100%{ border-color:  rgb(2, 255, 234) cyan magenta yellow}
+      
+    }
+    .border-bot{
+      animation: bottom 2s linear infinite;
+      border: 1px solid;
+       border-color: magenta yellow rgb(2, 255, 234) cyan;
+      
+    }
+    @keyframes bottom{
+      0%{ border-color: cyan}
+      33%{ border-color: magenta}
+      66%{ border-color: yellow}
+      100%{ border-color:  rgb(2, 255, 234)}
+    }
+    a:visit{
+      background-color: blue;
+    }
+    .bot-left{
+      border-left: 2px solid #28a745;
+      border-bottom: 2px solid #28a745;
+    }
+.pointer{
+  cursor: pointer;
+}
+#left_side{
+  position: sticky;
+  top: 0; 
+  overflow-y: scroll;
+  left: 0; 
+  height: 600px
+}
+#small_screen_bar, #cancel_bar{
+  display: none;
+}
+
+        @media(max-width: 780.98px){
+          #left_side{
+            display: none;
+            width: 90%;
+            position: absolute;
+            top: 0px;
+            transition: 1s;
+            height: 100%;
+            /*margin-top: 60px;*/
+            z-index: 2
+                  }
+                  #small_screen_bar, #cancel_bar{
+                    display: block;
+                  }
+                }
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Nunito:ital,wght@1,300&display=swap');
+    /*@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Goldman:wght@400;700&display=swap');*/
