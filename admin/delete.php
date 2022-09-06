@@ -137,3 +137,13 @@ if (isset($_GET['del_assignment'])) {
     header('location: assignment.php?class='.$class.'&date='.$date.'');
     }
 ?>
+
+<?php
+if (isset($_GET['del_reminder'])) {
+    
+    $id = $_GET['del_reminder'];
+    $sql = "DELETE FROM fees_reminder WHERE id = '{$id}'";
+    $query = mysqli_query($connect, $sql);
+    header('location: school_fees.php');
+    }
+?>

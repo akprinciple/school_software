@@ -333,7 +333,7 @@ $(document).ready(function() {
 </body>
 </html>
 
-<script src='tinymce/js/tinymce/tinymce.min.js'></script>
+<script src='../tinymce/js/tinymce/tinymce.min.js'></script>
 <script type="text/javascript">
 	
 tinymce.init({

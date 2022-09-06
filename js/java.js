@@ -1,3 +1,4 @@
+
 function time() {
 	time = setTimeout('show()', 1000);
 }
@@ -55,6 +56,9 @@ $(document).ready(function () {
 	$("#tap").click(function () {
 		$("#showup").slideToggle("slow");
 	})
-
+	$(".remind").click(function () {
+		$(".reminder").slideToggle("slow");
+	})
 
 });
+

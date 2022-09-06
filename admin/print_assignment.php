@@ -238,13 +238,13 @@ if(isset($_POST["action"]))
 ?>
  <form action="" method="post" style="position: absolute; bottom: 0" class="p-2 position-fixed d-block w-100">
  	<div class="text-center">
-     <?php echo $message; ?>
+     
      </div>
      <center>
    
     <button type="button" class="btn btn-success p-2" onclick="print(this)">Print</button>
     <a href="assignment?class=<?php echo $class; ?>&date=<?php echo $date; ?>" class="btn btn-danger p-2">Go Back</a>
-    <input type="submit" name="action" value="Send &#xf232;" class="btn btn-danger btn-lg fab fa-whatsapp">
+    <!-- <input type="submit" name="action" value="Send &#xf232;" class="btn btn-danger btn-lg fab fa-whatsapp"> -->
 </center>
  </form>
 

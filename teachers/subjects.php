@@ -37,12 +37,12 @@
 
            			<div class="">
 								<h5 class="text-center mt-4">Your Teaching Subjects</h5>
-           				<table class="table table-striped text-center col-md-12">
+           				<table class="table table-striped text-center border-bottom col-md-12">
            					<thead class="bg-success text-light">
            						<tr>
            							<th>S/N</th>
            							<th>Subjects</th>
-           							<th>Action</th>
+           							<th>Subject Code</th>
            						</tr>
            					</thead>
            					<tbody>
@@ -63,7 +63,15 @@
 										   echo $s['subject'];
 									   }
 									   ?></td>
-           							<td><span id="del" class="fas fa-pen text-success pointer"></span></td>
+           							<td>
+                        <?php
+                    $sels = "SELECT * FROM subjects WHERE id = '{$rw['subject']}' ";
+                  $selts = mysqli_query($connect, $sels);
+                     foreach($selts as $s){
+                       echo $s['subjectcode'];
+                     }
+                     ?>      
+                        </td>
            						</tr>
 
            					<?php } ?>	

@@ -16,7 +16,7 @@ $dob = mysqli_real_escape_string($connect, $_POST['dob']);
 $class = mysqli_real_escape_string($connect, $_POST['class']);
 $level = mysqli_real_escape_string($connect, $_POST['level']);
 $gender = mysqli_real_escape_string($connect, $_POST['gender']);
-$code = "FT".date('ym').rand(00, 99);
+$code = "FT".date('ym').rand(100, 999);
 $date= date('d/M/Y');
 
 if ($session == "--Select Session--" || $gender == "--Select Gender--" || $level == "--Select Section--") {
@@ -243,13 +243,84 @@ $msg = "<div class='p-2 rounded alert-danger mb-2 mt-2'>Error</div>";
 
 
 
+<span class="float-right  p-2">
+  <a id="click" class="pointer btn btn-success fas fa-plus " title="Add new teacher"></a> 
+  <!-- Export Button -->
 
-<span class="float-right mb-3 bot-left p-2 bg-white">
-<a id="click" class="pointer text-success fas fa-plus mr-2" title="Add New Teacher"></a> 
+<a href="export/export_teachers?all" class="pointer btn btn-primary fas fa-file-csv " title="Export all teachers data as CSV"></a> 
+<!-- Import Button -->
+  <a href="javascript:void(0)" onclick="import_csv()" class="pointer btn btn-warning text-light fas fa-file-import " title="Import CSV file for teachers data"></a>
 <!-- <span class="">/</span> -->
-<a href="teachers" class="text-success fas fa-expand-arrows-alt" title="Refresh Page"></a>
+<a href="teachers" class="btn btn-danger fas fa-expand-arrows-alt" title="Refresh Page"></a>
 </span> 
 <div class="clearfix"></div>
+<?php
+            if(!empty($_GET['status'])){
+    switch($_GET['status']){
+        case 'succ':
+            $statusType = 'alert-success';
+            $statusMsg = 'Teachers data has been imported successfully.';
+            break;
+        case 'err':
+            $statusType = 'alert-danger';
+            $statusMsg = 'Some problem occurred, please try again.';
+            break;
+        case 'invalid_file':
+            $statusType = 'alert-danger';
+            $statusMsg = 'Please upload a valid CSV file.';
+            break;
+        default:
+            $statusType = '';
+            $statusMsg = '';
+    }
+}
+?>
+
+<!-- Display status message -->
+<?php if(!empty($statusMsg)){ ?>
+  <div class="col-xs-12">
+    <div class="alert <?php echo $statusType; ?>"><?php echo $statusMsg; ?></div>
+</div>
+<?php } ?>
+
+ <!-- Import Section -->
+   
+              <div class=" mt-3 border-bottom" id="importer"  style="display: none">
+                <h5 class="text-center font-weight-bold border-bottom">Import Teachers</h5>
+               
+                <form method="post" action="import/import_teachers.php" enctype="multipart/form-data">
+                  
+                  
+                  
+                  <div class="form-group col-md-6 mx-auto">
+                  <b>Choose CSV file</b>
+                 <input type="file" accept=".csv" required="required" name="file" class="form-control" >
+                
+                  </div>
+
+                 
+                 
+                  
+                  <div class="w-100 text-center">
+                  <button class="btn btn-success my-2 " name="submit" type="submit">Import</button>
+                  <button class="btn btn-danger my-2 " type="reset" onclick="import_csv()">Close</button>
+                  </div>
+                  
+                </form>
+                <script type="text/javascript">
+                    function import_csv() {
+                    var element = document.getElementById('importer');
+                    if(element.style.display === "none"){
+                    element.style.display = "block";
+                    }else{
+                    element.style.display = "none";
+                    }
+                    }
+                </script>
+              </div>
+
+
+
 <!-- Section to add a new teacher -->
             <div class="">
               <div class=" mt-3 border-bottom" id="reg" style="<?php if (!isset($_POST['submit'])) {

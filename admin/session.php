@@ -117,4 +117,4 @@ $(document).ready(function() {
 <?php } ?>
 </body>
 </html>
-    <?php include '../inc/footer.php'; ?>
+    <?php #include '../inc/footer.php'; ?>

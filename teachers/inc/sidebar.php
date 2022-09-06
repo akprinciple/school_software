@@ -99,12 +99,13 @@
 		</a>
 		</div>							
 
-<!------------------------------school Structures  ------------------------------->
+<!------------------------------Assignment  ------------------------------->
 
-								
-								
-							<!-- <b class="fas fa-caret-down float-right"></b> -->
-						
+								<a href="assignment" title="Post Assignment" class="nav-link border-bottom text-light">
+								<b class="fas fa-bell mr-3"></b>
+								Assignment
+								<b class="fas fa-caret-right float-right"></b>
+							</a>						
 						
 
 							

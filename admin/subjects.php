@@ -68,6 +68,86 @@
            			
 
 
+                  <?php
+            if(!empty($_GET['status'])){
+    switch($_GET['status']){
+        case 'succ':
+            $statusType = 'alert-success';
+            $statusMsg = 'Alotted Subjects csv file has been imported successfully.';
+            break;
+        case 'err':
+            $statusType = 'alert-danger';
+            $statusMsg = 'Some problem occurred, please try again.';
+            break;
+        case 'invalid_file':
+            $statusType = 'alert-danger';
+            $statusMsg = 'Please upload a valid CSV file.';
+            break;
+        case 'empty':
+            $statusType = 'alert-danger';
+            $statusMsg = 'There is nothing here to export';
+          break;
+        default:
+            $statusType = '';
+            $statusMsg = '';
+    }
+}
+?>
+
+<!-- Display status message -->
+<?php if(!empty($statusMsg)){ ?>
+  <div class="col-xs-12">
+    <div class="alert <?php echo $statusType; ?>"><?php echo $statusMsg; ?></div>
+</div>
+<?php } ?>
+
+ <!-- Import Section -->
+   
+              <div class=" mt-3 border-bottom" id="importer"  style="display: none">
+                <h5 class="text-center font-weight-bold border-bottom">Import Teachers' Alotted Subjects</h5>
+               
+                <form method="post" action="import/import_alotted_subject.php" enctype="multipart/form-data">
+                  
+                  
+                  
+                  <div class="form-group col-md-6 mx-auto">
+                  <b>Choose CSV file</b>
+                 <input type="file" accept=".csv" required="required" name="file" class="form-control" >
+                
+                  </div>
+
+                 
+                 
+                  
+                  <div class="w-100 text-center">
+                  <button class="btn btn-success my-2 " name="submit" type="submit">Import</button>
+                  <button class="btn btn-danger my-2 " type="reset" onclick="import_csv()">Close</button>
+                  </div>
+                  
+                </form>
+                <script type="text/javascript">
+                    function import_csv() {
+                    var element = document.getElementById('importer');
+                    if(element.style.display === "none"){
+                    element.style.display = "block";
+                    }else{
+                    element.style.display = "none";
+                    }
+                    }
+                </script>
+              </div>
+
+                     <span class="float-right">
+                 <!-- Export Button -->
+
+                <a href="export/export_alotted_subjects?all" class="pointer btn btn-primary fas fa-file-csv " title="Export alotted Subjects as CSV"></a> 
+              <!-- Import Button -->
+               <a href="javascript:void(0)" onclick="import_csv()" class="pointer btn btn-warning text-light fas fa-file-import " title="Import CSV file for alotted Subjects"></a>
+               </span>
+               <div class="clearfix"></div>
+
+
+
 
 
            			<div class="">

@@ -108,6 +108,11 @@
 						Print Terminal Result 
 					<b class="fas fa-caret-right text-light float-right"></b>
 		</a>
+		<a href="class_results" class="nav-link  border-bottom text-light" title="View Class Results">
+					<b class=" mr-3"></b>
+						Class Results 
+					<b class="fas fa-caret-right text-light float-right"></b>
+		</a>
 		</div>						
 
 <!------------------------------school Structures  ------------------------------->
@@ -161,6 +166,25 @@
 									<b class="fas fa-caret-right text-light float-right"></b>
 								</a>
 		</div>
+		<!------------------------------Reminders  ------------------------------->
+		<div id="" class="nav-link border-bottom text-light pointer remind" title="Assignment and School fees reminder">
+					<b class="fas fa-bell mr-3"></b>
+					Reminders
+					<b class="fas fa-caret-down text-light float-right"></b>
+				</div>				
+<!------------------------------ Submission type section  ------------------------------->
+				<div style="display: none;" class="reminder">			
+					<a href="assignment" class="nav-link border-bottom text-light" title="Assignment Reminder">
+						<b class=" mr-3"></b>
+							Assignment
+						<b class="fas fa-caret-right text-light float-right"></b>
+					</a>
+					<a href="school_fees" class="nav-link border-bottom text-light" title="School fees reminder">
+						<b class="mr-3"></b>
+							School Fees
+						<b class="fas fa-caret-right text-light float-right"></b>
+					</a>
+				</div>
 
 <!------------------------------ Materials  ------------------------------->
 
